@@ -1,0 +1,41 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /docker-images/base
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /docker-images/kafka-based/kafka
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /docker-images/maven-builder
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /docker-images/operator
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /systemtest/src/test/resources/connect-build
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /systemtest/src/test/resources/tiered-storage
+    schedule:
+      interval: daily
+
+  - package-ecosystem: maven
+    directory: /
+    schedule:
+      interval: daily
